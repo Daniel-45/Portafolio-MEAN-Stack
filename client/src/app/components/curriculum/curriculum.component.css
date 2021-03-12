@@ -1,0 +1,323 @@
+/* Curriculum */
+.container-curriculum {
+  padding: 4rem;
+  padding-top: 1rem;
+}
+
+#title h1 {
+  font-size: 3rem;
+}
+
+.container-curriculum h1,
+h2,
+h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: rgb(53, 103, 164, 1);
+}
+
+.container-curriculum h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #CCC;
+}
+
+.container-curriculum a {
+  color: blue;
+  text-decoration: none;
+}
+
+.container-curriculum p {
+  margin-top: 0.5rem;
+  text-align: justify;
+}
+
+.container-curriculum #title {
+  border-bottom: 1px solid #CCC;
+}
+
+.personal-information span {
+  margin-right: 0.2rem;
+  color: rgb(53, 103, 164, 1);
+}
+
+.data-experience {
+  display: flex;
+}
+
+.company p {
+  color: rgb(53, 103, 164, 1);
+}
+
+.description {
+  width: 48%;
+  margin-left: 2rem;
+}
+
+.data-studies {
+  display: flex;
+}
+
+.company-studies p {
+  color: rgb(53, 103, 164, 1);
+}
+
+.description-studies p {
+  margin-left: 2rem;
+}
+
+.company-studies-complementary-training p {
+  color: rgb(53, 103, 164, 1);
+}
+
+.description-studies-complementary-training p {
+  margin-left: 2rem;
+}
+
+.container-data-languages {
+  display: flex;
+}
+
+.data-languages p {
+  color: rgb(53, 103, 164, 1);
+}
+
+.languajes p {
+  margin-left: 2rem;
+}
+
+.description-languajes p {
+  margin-left: 4em;
+}
+
+.container-data-skills {
+  display: flex;
+}
+
+.data-skills p {
+  color: rgb(53, 103, 164, 1);
+}
+
+.description-skills p {
+  margin-left: 4rem;
+}
+
+@media (max-width: 25.875rem) {
+  .container-curriculum {
+    padding: 0.2rem;
+    padding-top: 16rem;
+  }
+
+  #title h1 {
+    font-size: 2rem;
+  }
+
+  .container-curriculum h1,
+  h2,
+  h3 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .container-curriculum h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #CCC;
+  }
+
+  .container-curriculum a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  .container-curriculum p {
+    margin-top: 0.5rem;
+    text-align: left;
+    font-size: 0.67rem;
+  }
+
+  .container-curriculum #title {
+    border-bottom: 1px solid #CCC;
+  }
+
+  .personal-information span {
+    margin-right: 0.2rem;
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .summary p {
+    font-size: 0.67rem;
+  }
+
+  .data-experience {
+    display: flex;
+  }
+
+  .company p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .data-studies {
+    display: flex;
+  }
+
+  .company-studies p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .description-studies p {
+    margin-left: 2rem;
+  }
+
+  .company-studies-complementary-training p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .description-studies-complementary-training p {
+    margin-left: 2rem;
+  }
+
+  .container-data-languages {
+    display: flex;
+  }
+
+  .data-languages p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .languajes p {
+    margin-left: 2rem;
+  }
+
+  .description-languajes p {
+    margin-left: 4em;
+  }
+
+  .container-data-skills {
+    display: flex;
+  }
+
+  .data-skills p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .description-skills p {
+    margin-left: 4rem;
+  }
+}
+
+
+@media (min-width: 40rem) and (max-width: 51.438rem) {
+  .container-curriculum {
+    padding: 1rem;
+  }
+
+  #title h1 {
+    font-size: 1.5rem;
+  }
+
+  #title h2 {
+    font-size: 1.2rem;
+  }
+
+  .container-curriculum h1,
+  h2,
+  h3 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .container-curriculum h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #CCC;
+  }
+
+  .container-curriculum a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  .container-curriculum p {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .container-curriculum #title {
+    border-bottom: 1px solid #CCC;
+  }
+
+  .personal-information span {
+    margin-right: 0.2rem;
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .data-experience {
+    display: flex;
+    text-align: left;
+  }
+
+  .company p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .data-studies {
+    display: flex;
+    text-align: left;
+  }
+
+  .company-studies p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .description-studies p {
+    margin-left: 2rem;
+  }
+
+  .company-studies-complementary-training p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .description-studies-complementary-training p {
+    margin-left: 2rem;
+  }
+
+  .container-data-languages {
+    display: flex;
+    text-align: left;
+  }
+
+  .data-languages p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .languajes p {
+    margin-left: 2rem;
+  }
+
+  .description-languajes p {
+    margin-left: 4em;
+  }
+
+  .container-data-skills {
+    display: flex;
+    text-align: left;
+  }
+
+  .data-skills p {
+    color: rgb(53, 103, 164, 1);
+  }
+
+  .description-skills p {
+    margin-left: 4rem;
+  }
+
+  .volunteer-experience p {
+    text-align: left;
+  }
+
+}

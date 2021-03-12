@@ -1,0 +1,77 @@
+<div class="container-contact"  *ngIf="contact">
+  <h2>{{ title }}</h2>
+
+  <div class="message-success" *ngIf="status == 'success'">
+    <p>El proyecto se ha creado correctamente, puedes verlo <a [routerLink]="[]">aquí</a></p>
+  </div>
+
+  <div class="message-failed" *ngIf="status == 'failed'">
+    <p>No se ha podido procesar la petición para crear el proyecto</p>
+  </div>
+
+  <form #contactForm="ngForm">
+    <p>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" required />
+      <span class="form-error" *ngIf="name.touched && !name.valid">
+        <p>El nombre es obligatorio</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="surnames">Apellidos</label>
+      <input type="text" name="surnames" #surnames="ngModel" [(ngModel)]="contact.surnames" required />
+      <span class="form-error" *ngIf="surnames.touched && !surnames.valid">
+        <p>Los apellidos son obligatorios</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="date">Fecha de nacimiento</label>
+      <input type="date" name="date" #dateOfBirth="ngModel" [(ngModel)]="contact.dateOfBirth" />
+    </p>
+
+    <p>
+      <label for="phone">Teléfono</label>
+      <input type="text" name="phone" #phone="ngModel" [(ngModel)]="contact.phone" required />
+      <span class="form-error" *ngIf="phone.touched && !phone.valid">
+        <p>El teléfono es obligatorio</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="email">E-mail de contacto</label>
+      <input type="email" name="email" #email="ngModel" [(ngModel)]="contact.email" required />
+      <span class="form-error" *ngIf="email.touched && !email.valid">
+        <p>El e-mail es obligatorio</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="address">Dirección de contacto</label>
+      <input type="text" name="address" #address="ngModel" [(ngModel)]="contact.address" required />
+      <span class="form-error" *ngIf="address.touched && !address.valid">
+        <p>La dirección de contacto es obligatoria</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="postCode">Código postal</label>
+      <input type="text" name="postCode" #postCode="ngModel" [(ngModel)]="contact.postCode" ng-maxlength="5" required />
+      <span class="form-error" *ngIf="postCode.touched && !postCode.valid">
+        <p>El código postal es obligatorio</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="message">Mensaje</label>
+      <textarea name="message" rows="6" #message="ngModel" [(ngModel)]="contact.message" required></textarea>
+      <span class="form-error" *ngIf="message.touched && !message.valid">
+        <p>El mensaje es obligatorio</p>
+      </span>
+    </p>
+
+
+    <input type="submit" value="ENVIAR" [disabled]="!contactForm.form.valid" />
+  </form>
+</div>

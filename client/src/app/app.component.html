@@ -1,0 +1,18 @@
+<header>
+  <nav class="nav">
+    <a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">SOBRE MÍ</a>
+    <a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">PROYECTOS</a>
+    <a [routerLink]="['/curriculum']" [routerLinkActive]="['actived']">CURRICULUM</a>
+    <a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']">CREAR PROYECTO</a>
+    <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">CONTACTO</a>
+  </nav>
+</header>
+
+<section id="contenido">
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  <p>Portafolio de Daniel Pompa Pareja &copy;</p>
+  <p>Udemy curso de JavaScript, TypeScript, Angular, MongoDB</p>
+</footer>

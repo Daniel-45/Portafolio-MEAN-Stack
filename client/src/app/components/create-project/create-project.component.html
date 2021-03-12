@@ -1,0 +1,76 @@
+<div class="container-create-project" *ngIf="project">
+  <h2>{{ title }}</h2>
+
+  <div class="message-success" *ngIf="status == 'success'">
+    <p>El proyecto se ha creado correctamente, puedes verlo <a [routerLink]="['/proyecto', saveProject]">aquí</a></p>
+  </div>
+
+  <div class="message-failed" *ngIf="status == 'failed'">
+    <p>No se ha podido procesar la petición para crear el proyecto</p>
+  </div>
+
+  <div class="message-success" *ngIf="status == 'exito'">
+    <p>El proyecto se ha actualizado correctamente, puedes verlo <a [routerLink]="['/proyecto', saveProject]">aquí</a></p>
+  </div>
+
+  <div class="message-failed" *ngIf="status == 'fallo'">
+    <p>No se ha podido procesar la petición para actualizar el proyecto</p>
+  </div>
+
+  <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+    <p>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required />
+      <span class="form-error" *ngIf="name.touched && !name.valid">
+        <p>El nombre es obligatorio</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="description">Descripción</label>
+      <textarea name="description" rows="6" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+      <span class="form-error" *ngIf="description.touched && !description.valid">
+        <p>La descripción obligatoria</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="category">Categoría</label>
+      <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required />
+      <span class="form-error" *ngIf="category.touched && !category.valid">
+        <p>La categoría es obligatoria</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="languages">Lenguajes de programación</label>
+      <input type="text" name="languages" #languages="ngModel" [(ngModel)]="project.languages" required />
+      <span class="form-error" *ngIf="languages.touched && !languages.valid">
+        <p>Los lenguajes de programación son obligatorios</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="technologies">Tecnologías utilizadas</label>
+      <input type="text" name="technologies" #technologies="ngModel" [(ngModel)]="project.technologies" required />
+      <span class="form-error" *ngIf="technologies.touched && !technologies.valid">
+        <p>Las tecnologías utilizadas son obligatorias</p>
+      </span>
+    </p>
+
+    <p>
+      <label for="year">Año de creación</label>
+      <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" />
+    </p>
+
+    <span *ngIf="project.image">
+      <img id="image-edit-project" src="{{ 'http://localhost:3700/api/' + 'get-image/' + project.image }}">
+    </span>
+
+    <p>
+      <label for="image">Imagen del proyecto</label>
+      <input type="file" name="image" (change)="fileChangeEvent($event)" />
+    </p>
+    <input type="submit" value="ENVIAR" [disabled]="!projectForm.form.valid" />
+  </form>
+</div>

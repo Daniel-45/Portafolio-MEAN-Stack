@@ -1,0 +1,463 @@
+/* Fuentes personalizadas */
+@font-face {
+  font-family: "yanone";
+  src: url("./assets/fonts/yanone.ttf");
+}
+
+/* Estilos generales de la web */
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+body {
+  margin: auto;
+  background-attachment: fixed;
+  background: url("./assets/images/pattern.png");
+  font-family: "yanone", Arial, Helvetica, sans-serif;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+/* Menú de navegación */
+header {
+  width: 100%;
+  height: 4rem;
+  margin: auto;
+  display: block;
+  position: fixed;
+  border-radius: 0.2rem;
+  background-color: rgb(53, 103, 164, 0.8);
+}
+
+nav {
+  width: 60%;
+  display: flex;
+  margin: 0px auto;
+  justify-content: space-around;
+}
+
+nav a {
+  width: 100%;
+  height: inherit;
+  padding: 0.8rem;
+  color: white;
+  margin: 0px auto;
+  line-height: 2.4rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+a:hover,
+.actived {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal */
+#contenido {
+  width: 60%;
+  padding-top: 6rem;
+  margin: 0px auto;
+  min-height: 50rem;
+  border-left: 1px solid #B7B7B7;
+  border-right: 1px solid #B7B7B7;
+  box-shadow: 0px 0px 40px black;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer */
+footer {
+  width: 60%;
+  margin: 0px auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+footer p {
+  padding-top: 0.5rem;
+}
+
+/* Componente about */
+.title {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #CCC;
+}
+
+.title h2 {
+  color: gray;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.web-email {
+  color: gray;
+}
+
+article.about {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.about h2 {
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #CCC;
+}
+
+.about p {
+  padding-bottom: 0.5rem;
+  text-align: justify;
+}
+
+/* Crear proyecto - formulario */
+.container-create-project {
+  padding: 4rem;
+  padding-top: 1rem;
+}
+
+.container-create-project h2 {
+  display: block;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #CCC;
+}
+
+form {
+  width: 80%;
+}
+
+form label {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="date"],
+form textarea {
+  width: 60%;
+  padding: 0.2rem;
+}
+
+form span>p {
+  margin-top: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+form input[type="submit"] {
+  color: white;
+  padding: 0.4rem;
+  display: block;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border: 1px solid rgb(53, 103, 164, 1);
+  background-color: rgb(53, 103, 164, 1);
+}
+
+form input[type="submit"]:hover {
+  background-color: rgb(53, 103, 164, 0.8);
+}
+
+form input[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: red;
+  margin-left: 0.2rem;
+}
+
+.message-failed {
+  color: red;
+}
+
+/* Listar proyectos */
+.container-list-projects {
+  padding: 4rem;
+  padding-top: 1rem;
+}
+
+.container-list-projects h2 {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #CCC;
+}
+
+.container-list-projects ul li {
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container-list-projects li {
+  width: 28%;
+  list-style-type: none;
+}
+
+.container-list-projects img {
+  width: 100%;
+  height: 6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 5px black;
+  border: rgba(255, 255, 255, 0.8);
+}
+
+.image {
+  width: 60%;
+  margin: auto;
+}
+
+.container-list-projects a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Detalles de un proyecto */
+#container-details-project {
+  width: 90%;
+  margin: auto;
+}
+
+.container-project {
+  width: 94%;
+  margin: auto;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.container-project p {
+  margin-top: 0.5rem;
+}
+
+.container-project-image {
+  width: 30%;
+}
+
+.container-project-image img {
+  width: 100%;
+  height: 9rem;
+  border-radius: 0.4rem;
+  box-shadow: 0px 0px 5px black;
+  border: rgba(255, 255, 255, 0.8);
+}
+
+#detalles-proyecto h2 {
+  width: 80%;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #CCC;
+}
+
+.container-project-data {
+  width: 60%;
+}
+
+#button-edit,
+#button-delete {
+  width: 25%;
+  color: white;
+  padding: 0.4rem;
+  text-align: center;
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  line-height: 1.4rem;
+}
+
+#button-edit {
+  border: none;
+  background-color: rgb(53, 103, 164, 1);
+}
+
+#button-delete {
+  border: none;
+  background-color: rgb(253, 0, 0, 1);
+}
+
+/* Actualizar proyecto */
+#image-edit-project {
+  width: 61%;
+  margin-top: 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 5px black;
+  border: rgba(255, 255, 255, 0.8);
+}
+
+/* Confirmación eliminar */
+#confirm {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Formulario de contacto */
+.container-contact {
+  padding: 4rem;
+  padding-top: 1rem;
+}
+
+.container-contact h2 {
+  display: block;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #CCC;
+}
+
+/* Media Query telefono móvil */
+@media (min-width: 20rem) and (max-width: 39.5rem) {
+
+  header {
+    width: 100%;
+    height: auto;
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav a {
+    text-align: left;
+  }
+
+  /* Contenedor principal */
+  #contenido {
+    width: 100%;
+  }
+
+  .title { 
+    margin-top: 16rem;
+  }
+
+  /* Listar proyectos */
+  .container-list-projects {
+    padding: 0.5rem;
+    margin-top: 16rem;
+  }
+
+  .container-list-projects ul li {
+    width: 80%;
+    margin-left: 1.4rem;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  /* Crear proyecto */
+  .container-create-project {
+    padding: 1rem;
+    margin-top: 16rem;
+  }
+
+  /* Formulario de contacto */
+  .container-contact {
+    padding: 1rem;
+    margin-top: 16rem;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"],
+  form input[type="date"],
+  form textarea {
+    width: 90%;
+  }
+
+  /* Detalles proyectos */
+  .container-project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-project-image {
+    width: 90%;
+  }
+
+  .container-project-data {
+    width: 90%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Media Query telefono móvil Landscape */
+@media (min-width: 40rem) and (max-width: 51.438rem) {
+
+  nav {
+    width: 100;
+  }
+
+  nav a {
+    padding: 0.2rem;
+    line-height: 3.6rem;
+  }
+
+  #contenido {
+    min-height: 30rem;
+  }
+
+  /* About */
+  #title h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Crear proyecto - formulario */
+  form {
+    width: 100%;
+  }
+
+  form label {
+    width: 100%;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"],
+  form textarea {
+    width: 60%;
+  }
+
+  /* Listar proyectos */
+  .container-list-projects {
+    padding: 1rem;
+  }
+
+  .container-list-projects ul li {
+    width: 25%;
+  }
+
+}

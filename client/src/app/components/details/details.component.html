@@ -1,0 +1,35 @@
+<div class="title">
+  <h1>{{ title }}</h1>
+  <h2>{{ subtitle }}</h2>
+  <p class="web-email">web: {{ web }} - email: {{ email }}</p>
+</div>
+
+<div id="detalles-proyecto">
+  <h2>DETALLES DEL PROYECTO</h2>
+</div>
+
+<div id="container-details-project">
+  <div class="container-project" *ngIf="project">
+    <div class="container-project-image">
+      <img id="image" src="{{ url + 'get-image/' + project.image }}" *ngIf="project.image">
+    </div>
+
+    <div class="container-project-data">
+      <h2>{{ project.name }}</h2>
+      <p><strong>Descripción:</strong> {{ project.description }}</p>
+      <p><strong>Categoría:</strong> {{ project.category }}</p>
+      <p><strong>Lenguajes de programación: </strong> {{ project.languages }}</p>
+      <p><strong>Tecnologías utilizadas: </strong> {{ project.technologies }}</p>
+      <p><strong>Año de creación:</strong> {{ project.year }}</p>
+      <p *ngIf="confirm == false">
+        <a [routerLink]="['/editar-proyecto', project._id]" id="button-edit">EDITAR</a>
+        <a (click)="setConfirm(true)" id="button-delete">ELIMINAR</a>
+      </p>
+      <p *ngIf="confirm == true">
+        <span id="confirm">¿Estás seguro de que quieres eliminar el proyecto?</span>
+        <a (click)="setConfirm(false)" id="button-edit">CANCELAR</a>
+        <a (click)="deleteProject(project._id)" id="button-delete">ELIMINAR</a>
+      </p>
+    </div>
+  </div>
+</div>
